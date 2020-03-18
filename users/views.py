@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.contrib.auth.forms import UserCreationForm
 
-def regirter(request):
-        return render(request, 'users/registration.html')
+def register(request):
+    form = UserCreationForm()
+    return render(request, 'users/registration.html', {'form':form, 'title': 'Регистрация пользователя'})
