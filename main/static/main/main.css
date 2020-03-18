@@ -1,0 +1,15 @@
+.logo {
+  left: 100px;
+  top: 15px;
+  font-size: 50px;
+  position:absolute;
+  transition: transform 1s;
+}
+
+.logo:hover{
+  transform: scale(1.5);
+}
+
+.part2, .part3 {
+  background-color:#dae0e5;
+}
