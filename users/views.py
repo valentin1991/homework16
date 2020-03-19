@@ -1,7 +1,7 @@
 from django.shortcuts import render, redirect
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
-from .forms import UseerOurRegistration, ProfileImage, UserUpdateForm
+from .forms import UseerOurRegistration, ProfileImage, UserUpdateForm,EmaiDeliveryAgree
 
 def register(request):
     if request.method == "POST":
@@ -20,9 +20,10 @@ def register(request):
 def profile(request):
     img_profile = ProfileImage()
     update_user = UserUpdateForm()
-
+    check = EmaiDeliveryAgree()
     data = {
     'img_profile': img_profile,
-    'update_user': update_user
+    'update_user': update_user,
+    'check': check
     }
     return render(request, 'users/profile.html',data)

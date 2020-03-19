@@ -2,6 +2,9 @@ from django import forms
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserCreationForm
 from .models import Profile
+from django.db import models
+from django.db.models import Model
+
 
 class UseerOurRegistration(UserCreationForm):
     email = forms.EmailField(required = True)
@@ -26,3 +29,9 @@ class ProfileImage(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['img']
+
+class EmaiDeliveryAgree(forms.ModelForm):
+
+    class Meta:
+        model = Profile
+        fields = ['check_agree']
