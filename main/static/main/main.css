@@ -13,3 +13,21 @@
 .part2, .part3 {
   background-color:#dae0e5;
 }
+
+.form-section{
+  background: #fff;
+  padding: 20px;
+  border: 2px solid;
+  border-radius: 15px;
+  -webkit-box-shadow: 0 4px 6px 0 rgba(74, 74, 74, .21);
+  -moz-box-shadow:0 4px 6px 0 rgba(74, 74, 74, .21);
+  box-shadow:0 4px 6px 0 rgba(74, 74, 74, .21);
+  margin-top: 150px;
+  margin-bottom: 200px;
+
+}
+
+.form-section > h2 {
+  color: #f9bb00;
+  margin-bottom: 10px;
+}
