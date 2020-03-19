@@ -1,6 +1,7 @@
 {% extends 'main/main.html' %}
 {% block main_section %}
-    <div class="form-section">
+<div class="container">
+    <div class="form-section border border-warning m-5 p-5 rounded-lg" >
       <h2>регистрация на сайте</h2>
       <form  method="post">
         {% csrf_token %}
@@ -8,4 +9,5 @@
       </form>
       <button type="submit" class="btn btn-outline-warning">Зарегистрироваться</button>
     </div>
+</div>
 {% endblock main_section %}
