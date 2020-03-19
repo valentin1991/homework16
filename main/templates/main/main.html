@@ -21,6 +21,11 @@
       <a class="p-2 text-white" href="#"><b>Контакты</b></a>
       <a class="p-2 text-white" href="#"><b>Про нас</b></a>
     </nav>
+    <div class="">
+      {}
+      <a href="{% url 'reg' %}" class="btn btn-outline-secondary mr-2"> Регистрация</a>
+      <a href="{% url 'user' %}" class="btn btn-outline-secondary mr-2"> Войти </a>
+    </div>
   </div>
     {% if messages %}
       {% for mess in messages %}
