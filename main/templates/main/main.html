@@ -22,6 +22,13 @@
       <a class="p-2 text-white" href="#"><b>Про нас</b></a>
     </nav>
   </div>
+    {% if messages %}
+      {% for mess in messages %}
+        <div class="alert alert-success">
+          {{ mess }}
+        </div>
+      {% endfor %}
+    {%endif%}
     {% block main_section %}
     {% endblock %}
   <nav class="navbar  navbar-expand-sm navbar-dark bg-dark">
