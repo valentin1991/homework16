@@ -22,9 +22,13 @@
       <a class="p-2 text-white" href="#"><b>Про нас</b></a>
     </nav>
     <div class="">
-      {}
+      {% if user.is_authenticated %}
+      <a href="{% url 'profile' %}" class="btn btn-outline-secondary "> Профиль</a>
+      <a href="{% url 'exit' %}" class="btn btn-outline-secondary ">Выйти</a>
+      {% else %}
       <a href="{% url 'reg' %}" class="btn btn-outline-secondary mr-2"> Регистрация</a>
       <a href="{% url 'user' %}" class="btn btn-outline-secondary mr-2"> Войти </a>
+      {% endif %}
     </div>
   </div>
     {% if messages %}

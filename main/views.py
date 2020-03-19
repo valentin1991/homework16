@@ -10,3 +10,5 @@ def home (request):
 
 def servis (request):
     return render (request, 'main/servis.html')
+
+    
