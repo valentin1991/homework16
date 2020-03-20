@@ -22,11 +22,13 @@ def profile(request):
         img_profile = ProfileImage(request.POST, request.FILES, instance = request.user.profile)
         update_user = UserUpdateForm(request.POST, instance = request.user)
         check_profile = EmaiDeliveryAgree(request.POST,  instance = request.user.profile)
+        gender_profile = GenderSelection(request.POST, instance = request.user.profile)
 
         if update_user.is_valid() and img_profile.is_valid() and check_profile.is_valid():
             img_profile.save()
             update_user.save()
             check_profile.save()
+            gender_profile.save()
             messages.success(request, f'Аккаунт был успешно обновлен ')
 
             return redirect('profile')
@@ -35,7 +37,7 @@ def profile(request):
         img_profile = ProfileImage(instance = request.user.profile)
         update_user = UserUpdateForm(instance = request.user)
         check_profile = EmaiDeliveryAgree(instance = request.user.profile)
-        gender_profile = GenderSelection()
+        gender_profile = GenderSelection(instance = request.user.profile)
 
     data = {
     'img_profile': img_profile,
