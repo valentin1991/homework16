@@ -35,3 +35,9 @@ class EmaiDeliveryAgree(forms.ModelForm):
     class Meta:
         model = Profile
         fields = ['check_agree']
+
+
+class GenderSelection(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['gender']

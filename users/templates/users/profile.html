@@ -13,13 +13,17 @@
       </p>
       </div>
       <h2>Изменить данные для пользователя</h2>
-      <div  method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ update_user|crispy }}
-        {{ img_profile|crispy }}
-        
-        <button type="submit" class="btn btn-outline-warning">Обновить данные</button>
-    </div>
+      <form  method="POST">
+
+        <div  method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          {{ update_user|crispy }}
+          {{ img_profile|crispy }}
+          {{ check_profile|crispy }}
+          {{ gender_profile|crispy }}
+          <button type="submit" class="btn btn-outline-warning">Обновить данные</button>
+      </div>
+    </form>
     </div>
 </div>
 {% endblock main_section %}
